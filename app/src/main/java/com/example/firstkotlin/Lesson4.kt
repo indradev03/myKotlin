@@ -1,4 +1,3 @@
-@file:JvmName("Lesson5Kt")
 
 package com.example.firstkotlin
 
