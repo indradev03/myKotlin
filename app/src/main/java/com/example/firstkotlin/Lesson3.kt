@@ -15,3 +15,26 @@ fun main() {
     println(x)
     print(a.plus("How are you?"))
 }
+
+//fun main() {
+//    var a : Boolean = true
+//    var b : Char = 'R'
+//    var c: Byte = 12
+//    var d: Short = -356
+//    var e: Int = 4352
+//    var f: Long = -5132135L
+//    var i: Float = 5.6546653F
+//    var h: Double = 7.655474
+//
+//    println(a)
+//    println(b)
+//    println(c)
+//    println(d)
+//    println(e)
+//    println(f)
+//    println(i)
+//    println(h)
+//}
+
+
+
