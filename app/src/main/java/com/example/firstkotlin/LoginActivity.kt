@@ -18,13 +18,18 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowLeft
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
@@ -141,29 +146,81 @@ fun LoginHeader(innerPadding: PaddingValues) {
             }
         }
 
-        Text(text = "Black Widow",
-            style =  TextStyle(
+        Column (
+            modifier =
+                Modifier.padding(
+                    horizontal = 10.dp,
+                    vertical = 15.dp))
+        {
+            Text(text = "Black Widow",
+                style =  TextStyle(
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Bold,
-            ), modifier = Modifier.padding(16.dp)
-        )
+            ))
+            Text(text = "Actor", modifier = Modifier.alpha(0.5f))
+            // ) 0.5f vanyeko Obacity ho yesko highest valye 1 ho
 
-        Text(text = "The OG Marvel",
-            style =  TextStyle(
-                fontSize = 15.sp,
-            ),  modifier = Modifier.offset(x = 15.dp) // offset() le chai x ra y ma postion manage garxa
-        )
+            Text(text = "Designer")
+            Text(text = "widow@gmail.com")
+            Text(text = "Followed by iornman, Steverog and more")
+        }
 
+        // Yo Row chai FOlloe message, email ra Droparrow ko laagi ho
+        Row (
+            modifier = Modifier
+                .fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceAround,
 
-        Text(text = "Followed by iornman, Steverog and more",
-            style =  TextStyle(
-                fontSize = 15.sp,
-            ),  modifier = Modifier.offset(x = 15.dp, y = 20.dp),
-        )
+            ){
+            Button(onClick = {
+                // user le button thichne pachi ke garne to-do when clicked
+            },
+                shape = RoundedCornerShape(10.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.Blue,
+                    contentColor = Color.White
+                )
+            ) {
+                Text(text = "Follow")
+            }
 
+            OutlinedButton (onClick = {
+                // user le button thichne pachi ke garne ,to-do when clicked
+            },
+                shape = RoundedCornerShape(10.dp),
+                colors = ButtonDefaults.outlinedButtonColors(
+                    contentColor = Color.Black
+                )
+            ) {
+                Text(text = "Message")
+            }
 
+            OutlinedButton(onClick = {
+                // user le button thichne pachi ke garne to-do when clicked
+            },
+                shape = RoundedCornerShape(10.dp),
+                colors = ButtonDefaults.outlinedButtonColors(
+                    contentColor = Color.Black
+                )
+            ) {
+                Text(text = "Email")
+            }
 
-
+            OutlinedButton (onClick = {
+                // user le button thichne pachi ke garne to-do when clicked
+            },
+                shape = RoundedCornerShape(10.dp),
+                colors = ButtonDefaults.outlinedButtonColors(
+                    contentColor = Color.Black
+                )
+            ) {
+                Icon(
+                    imageVector = Icons.Default.KeyboardArrowDown,
+                    contentDescription = null
+                )
+            }
+        }
 
     }
 
