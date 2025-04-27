@@ -67,7 +67,8 @@ class LoginActivity : ComponentActivity() {
             }
         }
     }
-}@Composable
+}
+@Composable
 fun LoginHeader(innerPadding: PaddingValues) {
 
     Column(
